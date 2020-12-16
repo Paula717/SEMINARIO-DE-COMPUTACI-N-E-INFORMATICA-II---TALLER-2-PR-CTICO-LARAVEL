@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HabitacionesController;
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\FacturacionController;
+use App\Http\Controllers\ReservasController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -12,64 +18,25 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Controlador Hotel
+Route::get('/', [HotelController::class, 'getIndex']); //Ruta /
+Route::get('hotel/historia', [HotelController::class, 'showHistoria']); //Ruta hotel/historia
+Route::get('hotel/mision-vision', [HotelController::class, 'showMision']); //Ruta hotel/mision-vision 
+Route::get('hotel/ubicacion', [HotelController::class, 'showUbicacion']); //Ruta hotel/ubicación
+Route::get('contactos', [HotelController::class, 'showContactos']); //Ruta contactos
 
-//Ruta /
-Route::get('/', function () 
-{
-    return view('principal');
-});
+//Controlador Habitacion
+Route::get('servicios/habitaciones', [HabitacionesController::class, 'showHabitaciones']); //Ruta servicios/habitaciones
+Route::get('servicios/eventos', [HabitacionesController::class, 'showEventos']); //Ruta servicios/eventos => Parametro
 
-//Ruta hotel/historia
-Route::get('hotel/historia', function () 
-{
-    return view('hotel.historia');
-});
+//Controlador Clientes
+Route::get('clientes/visualizar', [ClientesController::class, 'showClientes']); //Ruta clientes/visualizar
 
-//Ruta hotel/mision-vision 
-Route::get('hotel/mision-vision', function () 
-{
-    return view('hotel.vision');
-});
+//Controlador Facturacion
+Route::get('facturacion', [FacturacionController::class, 'getFactura']); //Ruta facturacion
 
-//Ruta hotel/ubicación
-Route::get('hotel/ubicacion', function () 
-{
-    return view('hotel.ubicacion');
-});
+//Controlador Reservas
 
-//Ruta servicios/habitaciones
-Route::get('servicios/habitaciones', function () 
-{
-    return view('servicios.habitaciones');
-});
-
-//Ruta servicios/eventos => Parametro
-Route::get('servicios/eventos/{id}', function ($id) 
-{
-    return view('servicios.eventos', array('id' => $id));
-});
-
-//Ruta clientes/visualizar
-Route::get('clientes/visualizar', function () 
-{
-    return view('clientes.clientes');
-});
-
-//Ruta facturacion
-Route::get('facturacion', function () 
-{
-    return view('facturacion.factura');
-});
-
-//Ruta reservas
-Route::get('reservas', function () 
-{
-    return view('reservas.reservas');
-});
-
-//Ruta contactos
-Route::get('contactos', function () 
-{
-    return view('contacto');
-});
+Route::get('reservas', [ReservasController::class, 'getReservas'])->name('formularioReserva');//Ruta reservas
+Route::post('reservas', [ReservasController::class, 'getRegistrar'])->name('registroCli');//Ruta registrar
 

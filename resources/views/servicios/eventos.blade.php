@@ -1,4 +1,16 @@
 @extends('layout.master')
     @section('content')
-    <font size=4 face="Comic Sans MS,arial,verdana">Eventos {{ $id}}</font>
+    <h1> Listado de Eventos </h1>
+    <br>
+    <ul>
+        @foreach($eventos as $c)
+        <li>
+           <h2> {{ $c['nombre'] }} 
+            <a href='{{ url("servicios/eventos/$c[id]/$c[nombre]") }}'> </a>
+           </h2>
+           <br>
+        </li>
+        @endforeach
+
+    </ul>
 @stop
