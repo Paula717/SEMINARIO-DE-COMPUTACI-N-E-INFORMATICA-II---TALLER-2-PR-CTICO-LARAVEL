@@ -16,28 +16,23 @@ class PreciosSeeder extends Seeder
     {
         $precio = [
             [
-                'tipo'=>'HABITACIÓN CLASSIC DELUXE',
-                'precio'=> 65000
+                'tipo'=>'Sencilla',
+                'precio'=> 55000,
             ],
 
             [
-                'tipo'=> 'HABITACIÓN COLONIAL DELUXE',
-                'precio'=>  75000
+                'tipo'=> 'Doble',
+                'precio'=>  75000,
             ],
 
             [
-                'tipo'=> 'HABITACIÓN SUPERIOR LAGUITO',
-                'precio'=> 65000 
+                'tipo'=> 'Matrimonial',
+                'precio'=> 120000,
             ],
 
             [
-                'tipo'=>'HABITACIÓN PREMIUM LAGOMAR',
-                'precio'=>  80000
-            ],
-
-            [
-                'tipo'=> 'HABITACIÓN FAMILIAR',
-                'precio'=>  55000
+                'tipo'=>'suite',
+                'precio'=>  180000,
             ]
         ];
         DB::table('precio')->insert($precio);

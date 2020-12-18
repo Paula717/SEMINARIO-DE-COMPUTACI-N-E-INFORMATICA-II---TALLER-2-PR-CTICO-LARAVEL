@@ -41,15 +41,10 @@
         <div>
             <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option selected>Tipo de Habitación</option>
-                <option value="1">HABITACIÓN CLASSIC DELUXE</option>
-                <option value="2">HABITACIÓN COLONIAL DELUXE</option>
-                <option value="3">HABITACIÓN SUPERIOR LAGUITO</option>
-                <option value="4">HABITACIÓN PREMIUM LAGOMAR</option>
-                <option value="5">HABITACIÓN FAMILIAR</option>
-                <option value="6">JUNIOR SUITE</option>
-                <option value="7">SUITE LAGOMAR</option>
-                <option value="8">SUITE CASA DEL MAR</option>
-                <option value="9">CARIBBEAN SUITE</option>
+                <option value="1">SENCILLA</option>
+                <option value="2">DOBLE</option>
+                <option value="3">MATRIMONIAL</option>
+                <option value="2">SUITE</option>
             </select>
         </div>
 

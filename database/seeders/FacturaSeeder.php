@@ -18,18 +18,18 @@ class FacturaSeeder extends Seeder
             [
                 'numero' => 2,
                 'cliente' => 1,
-                'formaPago' => 1,
+                'formaPago' => 2,
                 'entrada' => '2020-12-14',
                 'salida' => '2020-12-20',
-                'total' => '450000'
+                'total' => '525000'
             ],
 
             [
                 'numero' => 5,
                 'cliente' => 3,
-                'formaPago' => 2,
+                'formaPago' => 1,
                 'entrada' => '2020-12-16',
-                'salida' => '2020-12-28',
+                'salida' => '2020-12-18',
                 'total' => '165000'
             ],
 
@@ -39,7 +39,7 @@ class FacturaSeeder extends Seeder
                 'formaPago' => 1,
                 'entrada' => '2020-12-14',
                 'salida' => '2020-12-17',
-                'total' => '260000'
+                'total' => '220000'
             ],
 
             [
@@ -48,16 +48,16 @@ class FacturaSeeder extends Seeder
                 'formaPago' => 2,
                 'entrada' => '2020-12-22',
                 'salida' => '2020-12-26',
-                'total' => '400000'
+                'total' => '900000'
             ],
 
             [
                 'numero' => 3,
                 'cliente' => 5,
-                'formaPago' => 1,
+                'formaPago' => 3,
                 'entrada' => '2020-12-18',
                 'salida' => '2020-12-20',
-                'total' => '195000'
+                'total' => '360000'
             ]
         ];
         DB::table('factura')->insert($factura);

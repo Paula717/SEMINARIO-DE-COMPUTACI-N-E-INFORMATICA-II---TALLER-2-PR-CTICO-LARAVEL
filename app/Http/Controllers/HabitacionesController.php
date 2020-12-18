@@ -9,11 +9,11 @@ class HabitacionesController extends Controller
 {
     public function showHabitaciones()
     {
-        $habitacion = DB::table('habitacion')
-        ->get();
+        $habitacion = DB::table('habitacion')->join('precio','precio_id','=','precio.id')->orderBy('numero','ASC')->get();
         return view('servicios.habitaciones',['habitaciones' => $habitacion]);
     }
 
+    //SELECT precio.precio FROM `habitacion`, `precio` WHERE habitacion.precio_id=precio.id
     public function showEventos()
     {
         $eventos =[

@@ -20,7 +20,11 @@ class FormaPagoSeeder extends Seeder
             ],
 
             [
-                'descripcion' => 'Tarjeta'
+                'descripcion' => 'Tarjeta Debito'
+            ],
+
+            [
+                'descripcion' => 'Tarjeta Credito'
             ]
         ];
         DB::table('formapago')->insert($pago);

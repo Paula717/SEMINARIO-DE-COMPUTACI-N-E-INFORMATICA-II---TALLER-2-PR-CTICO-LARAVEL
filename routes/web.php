@@ -39,4 +39,4 @@ Route::get('facturacion', [FacturacionController::class, 'getFactura']); //Ruta 
 
 Route::get('reservas', [ReservasController::class, 'getReservas'])->name('formularioReserva');//Ruta reservas
 Route::post('reservas', [ReservasController::class, 'getRegistrar'])->name('registroCli');//Ruta registrar
-
+Route::get('consultas', [ReservasController::class, 'getConsultar']);//Ruta consultas

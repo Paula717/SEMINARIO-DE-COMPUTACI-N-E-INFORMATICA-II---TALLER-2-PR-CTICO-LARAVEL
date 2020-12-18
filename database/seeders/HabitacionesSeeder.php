@@ -17,37 +17,37 @@ class HabitacionesSeeder extends Seeder
         $habitacion =[
             [
                 'descripcion' => 'Las habitaciones Classic Deluxe del Hotel Caribe son una opción muy recomendable para aquellos viajeros que quieren descansar en una atmósfera acogedora. ',
-                'numCama' => 100,
+                'numCama' => 2,
                 'foto' => 'h1.jpg',
-                'precio_id' => 1  
+                'precio_id' => 1,  
             ],
 
             [
                 'descripcion' => 'Las habitaciones Colonial Deluxe del Hotel Caribe son espacios repletos de encanto que le garantizan un descanso muy tranquilo en primera línea de mar.',
-                'numCama' => 101,
+                'numCama' => 1,
                 'foto' => 'h2.jpg',
-                'precio_id' => 2 
+                'precio_id' => 2,
             ],
 
             [
                 'descripcion' => 'Las habitaciones superiores Laguito del Hotel Caribe son dormitorios llenos de magia perfectos para parejas que quieren enamorarse de Cartagena.',
-                'numCama' => 102,
+                'numCama' => 1,
                 'foto' => 'h3.jpg',
-                'precio_id' => 3 
+                'precio_id' => 3, 
             ],
 
             [
                 'descripcion' => 'Las habitaciones Premium Lagomar del Hotel Caribe te invitan a disfrutar de un descanso muy especial en un ambiente muy elegante y cálido.',
-                'numCama' => 103,
+                'numCama' => 1,
                 'foto' => 'h4.jpg',
-                'precio_id' => 4 
+                'precio_id' => 4, 
             ],
 
             [
                 'descripcion' => 'Las habitaciones familiares del Hotel Caribe son alojamientos amplios y muy confortables perfectos para descansar junto a tus seres queridos.',
-                'numCama' => 104,
+                'numCama' => 3,
                 'foto' => 'h5.jpg',
-                'precio_id' => 5 
+                'precio_id' => 1, 
             ]
         ];
         DB::table('habitacion')->insert($habitacion);
